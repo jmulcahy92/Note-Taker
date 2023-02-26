@@ -1,4 +1,4 @@
-// COPIED PROMISIFIED FS FUNCTIONS FROM CLASS ACTIVITIES
+// COPIED HELPER FUNCTIONS FROM CLASS ACTIVITIES
 const fs = require('fs');
 const util = require('util');
 
