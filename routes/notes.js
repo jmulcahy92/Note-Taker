@@ -6,7 +6,25 @@ notes.get('/', (req,res) =>
 );
 
 notes.post('/', (req, res) => {
-    return;
+    const {title, text} = req.body;
+
+    if (title && text) {
+        const newNote = {
+            title,
+            text,
+        };
+
+        readAndAppend(newNote, './db/db.json');
+
+        const response = {
+            status: 'success',
+            body: newNote
+        };
+
+        res.json(response);
+    } else {
+        res.json('Error in posting note');
+    }
 });
 
 // notes.delete('/:note', (req, res) => {
