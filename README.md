@@ -6,7 +6,7 @@ This "Note Taker" application can be used to write and save notes. It uses an ex
 
 ## Link
 
-https://thawing-scrubland-79810.herokuapp.com/notes
+https://thawing-scrubland-79810.herokuapp.com/
 
 ## Screenshot
 
