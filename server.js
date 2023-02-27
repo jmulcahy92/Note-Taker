@@ -19,14 +19,15 @@ app.use('/api', api);
 // 'public' folder contains front-end
 app.use(express.static('public'));
 
-// GET homepage (technically unnecessary thanks to above line and naming appropriate file index.html)
-app.get('/', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/index.html'))
-);
-
 // GET notes page
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
+);
+
+// GET homepage; line 20 plus the appropriate file being named index.html means the '/' path will lead to the homepage as desired
+// but this '*' path will also catch any bad pathways
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 // listen on environment-determined port or port 3001 by default
